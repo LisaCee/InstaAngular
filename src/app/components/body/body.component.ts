@@ -8,8 +8,8 @@ import { Image } from 'src/app/models/Image';
   styleUrls: ['./body.component.sass']
 })
 export class BodyComponent implements OnInit {
-  images: Image[];
 
+  images: Image[];
   constructor() { }
   ngOnInit() {
     this.images = [{
