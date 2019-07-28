@@ -6,8 +6,7 @@ import { Image } from '../models/Image';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json',
-    'Accept-Version': 'v1'
+    'Content-Type': 'application/json'
   })
 }
 
@@ -15,12 +14,12 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class BodyService {
-  imgUrl: string = 'https://source.unsplash.com';
-  // api_key = process.env.ACCESS_KEY;
+
+  imgUrl: string = 'https://picsum.photos/v2/list';
 
   constructor(private http: HttpClient) { }
 
   getImages(): Observable<Image[]> {
-    return this.http.get<Image[]>('https://jsonplaceholder.typicode.com/photos')
+    return this.http.get<Image[]>(`${this.imgUrl}`, httpOptions)
   }
 }
