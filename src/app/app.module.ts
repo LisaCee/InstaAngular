@@ -8,6 +8,7 @@ import { BodyComponent } from './components/body/body.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { SearchComponent } from './components/search/search.component';
 import { CardComponent } from './components/card/card.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CardComponent } from './components/card/card.component';
     BodyComponent,
     CommentsComponent,
     SearchComponent,
-    CardComponent
+    CardComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

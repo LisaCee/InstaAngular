@@ -16,10 +16,14 @@ const httpOptions = {
 export class BodyService {
 
   imgUrl: string = 'https://picsum.photos/v2/list';
+  avatarUrl: string = 'https://randomuser.me/api/?results=30';
 
   constructor(private http: HttpClient) { }
 
   getImages(): Observable<Image[]> {
     return this.http.get<Image[]>(`${this.imgUrl}`, httpOptions)
+  }
+  getAvatar(): Observable<any> {
+    return this.http.get<any>(`${this.avatarUrl}`)
   }
 }
