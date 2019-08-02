@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Image } from '../models/Image';
+import { Avatar } from '../models/Avatar';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -23,7 +24,7 @@ export class BodyService {
   getImages(): Observable<Image[]> {
     return this.http.get<Image[]>(`${this.imgUrl}`, httpOptions)
   }
-  getAvatar(): Observable<any> {
-    return this.http.get<any>(`${this.avatarUrl}`)
+  getAvatar(): Observable<Avatar> {
+    return this.http.get<Avatar>(`${this.avatarUrl}`)
   }
 }

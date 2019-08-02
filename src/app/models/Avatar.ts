@@ -1,4 +1,7 @@
 export class Avatar {
     id: number;
-    source: string
+    source: string;
+    results: [];
+    picture: object;
+    thumbnail: string;
 }
