@@ -1,4 +1,9 @@
 <div>
-    <app-card *ngFor='let avatar of avatars' [avatars]="avatars">
-    </app-card>
+    <section>
+        <app-user *ngFor='let avatars of avatars' [avatars]='avatars'></app-user>
+    </section>
+    <section>
+        <app-card *ngFor='let images of images' [images]='images'></app-card>
+    </section>
+
 </div>

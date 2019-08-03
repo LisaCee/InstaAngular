@@ -17,7 +17,7 @@ const httpOptions = {
 export class BodyService {
 
   imgUrl: string = 'https://picsum.photos/v2/list';
-  avatarUrl: string = 'https://randomuser.me/api/?results=30';
+  avatarUrl: string = 'https://randomuser.me/api/?results=15';
 
   constructor(private http: HttpClient) { }
 

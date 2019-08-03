@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Avatar } from 'src/app/models/Avatar';
+import { BodyService } from '../../services/body.service';
 
 
 @Component({
@@ -8,7 +10,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  @Input() avatars: Avatar;
+  constructor(private bodyService: BodyService) { }
 
   ngOnInit() {
   }

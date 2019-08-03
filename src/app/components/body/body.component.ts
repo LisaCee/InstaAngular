@@ -15,12 +15,13 @@ export class BodyComponent implements OnInit {
   avatars: Avatar[];
 
   constructor(private bodyService: BodyService) { }
+
   ngOnInit() {
     this.bodyService.getImages()
       .subscribe(img => {
         this.images = img;
-        // console.log('IMG', this.images)
       })
+
     this.bodyService.getAvatar().subscribe(img => {
       this.avatars = img.results;
       console.log("AVATAR", this.avatars);
