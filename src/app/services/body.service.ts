@@ -18,6 +18,7 @@ export class BodyService {
 
   imgUrl: string = 'https://picsum.photos/v2/list';
   avatarUrl: string = 'https://randomuser.me/api/?results=15';
+  commentUrl: string = 'https://jsonplaceholder.typicode.com/comments'
 
   constructor(private http: HttpClient) { }
 
@@ -26,5 +27,8 @@ export class BodyService {
   }
   getAvatar(): Observable<Avatar> {
     return this.http.get<Avatar>(`${this.avatarUrl}`)
+  }
+  getComments(): Observable<any> {
+    return this.http.get<any>(`${this.commentUrl}`)
   }
 }

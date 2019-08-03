@@ -13,6 +13,7 @@ export class BodyComponent implements OnInit {
 
   images: Image[];
   avatars: Avatar[];
+  comments: [];
 
   constructor(private bodyService: BodyService) { }
 
@@ -26,6 +27,10 @@ export class BodyComponent implements OnInit {
       this.avatars = img.results;
       console.log("AVATAR", this.avatars);
     });
+    this.bodyService.getComments().subscribe(comment => {
+      this.comments = comment;
+      console.log("COMMENTS", this.comments)
+    })
   }
 
 }
