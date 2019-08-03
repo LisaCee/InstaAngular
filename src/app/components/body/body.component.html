@@ -1,9 +1,10 @@
 <div>
-    <section>
-        <app-user *ngFor='let avatars of avatars' [avatars]='avatars'></app-user>
-    </section>
-    <section>
+
+    <app-user *ngFor='let avatars of avatars' [avatars]='avatars'>
         <app-card *ngFor='let images of images' [images]='images'></app-card>
-    </section>
+    </app-user>
+
+
+
 
 </div>
